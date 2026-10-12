@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --sf-brand: #d94a2b;
+  --sf-brand-fg: #ffffff;
+  --sf-brand-tint: #f4f1eb;
+  --sf-brand-muted: #f3c5bb;
+  --sf-surface: #ffffff;
+  --sf-surface-fg: #0f1b2d;
+  --sf-border: #f3f4f6;
+  --sf-muted: #6b7280;
+  --sf-on-tint: #0f1b2d;
+  --sf-ink: #0f1b2d;
+  --sf-ink-fg: #ffffff;
+  --sf-star: #eea232;
+  --sf-radius: 1rem;
+  --sf-radius-control: 9999px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--sf-surface);
+  color: var(--sf-surface-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility colors matching the reference variables */
+.bg-sf-surface { background-color: var(--sf-surface); }
+.text-sf-surface-fg { color: var(--sf-surface-fg); }
+.bg-sf-brand { background-color: var(--sf-brand); }
+.text-sf-brand { color: var(--sf-brand); }
+.text-sf-brand-fg { color: var(--sf-brand-fg); }
+.bg-sf-brand-tint { background-color: var(--sf-brand-tint); }
+.text-sf-on-tint { color: var(--sf-on-tint); }
+.bg-sf-ink { background-color: var(--sf-ink); }
+.text-sf-ink { color: var(--sf-ink); }
+.text-sf-ink-fg { color: var(--sf-ink-fg); }
+.text-sf-muted { color: var(--sf-muted); }
+.border-sf-border { border-color: var(--sf-border); }
+.text-sf-star { color: var(--sf-star); }
+
+/* Hide scrollbar helpers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
